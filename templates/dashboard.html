@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Secure Password Manager{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ username }} 👋</h1>
+    <p class="subtitle">Manage your passwords securely.</p>
+
+    <div class="dashboard-menu">
+        <a href="{{ url_for('add_password') }}">➕ Add Password</a>
+        <a href="{{ url_for('view_passwords') }}">📂 View Passwords</a>
+        <a href="{{ url_for('generate_password') }}">🔑 Password Generator</a>
+        <a href="{{ url_for('logout') }}" class="logout-btn">🚪 Logout</a>
+    </div>
+{% endblock %}
